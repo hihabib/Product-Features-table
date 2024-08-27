@@ -1,0 +1,14 @@
+.warning {
+    display: flex;
+    background: #FDF4D7;
+    border: 1px solid #ded4b2;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.warning svg {
+    fill: #c1a659;
+    height: 40px;
+    width: 40px;
+}
