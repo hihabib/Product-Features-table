@@ -5,6 +5,249 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <style>
+      /*Reset site style*/
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 10px;
+        margin-bottom: 20px;
+      }
+
+      /*Main CSS Starts from here*/
+      :root {
+        --features-data-background: #ebebeb;
+        --features-package-border-width: 3px;
+        --features-gap: 30px;
+      }
+      /*Features*/
+      .feature-container {
+        display: flex;
+        align-items: flex-end;
+        margin: 20px 0 50px 0;
+      }
+      .feature-container .title-container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: calc(var(--features-package-border-width) * -1);
+        padding-bottom: 20px;
+      }
+      .feature-container .title-container > div {
+        padding: 6px 0 6px 30px;
+      }
+      .feature-container .title-container > div:nth-child(odd) {
+        background-color: var(--features-data-background);
+      }
+
+      /*Gap*/
+      .feature-container .gap {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: calc(var(--features-package-border-width) * -1);
+        padding-bottom: 20px;
+      }
+      .feature-container .gap > div {
+        padding: 6px 0 6px 0;
+        width: var(--features-gap);
+      }
+      .feature-container .gap > div:nth-child(odd) {
+        background-color: var(--features-data-background);
+      }
+
+      /*Package box style*/
+      .feature-container .package-mobile-title {
+        display: none;
+      }
+      .feature-container .package-container .package-data > div:nth-child(odd),
+      .feature-container
+        .package-container
+        .package-mobile-title
+        > div:nth-child(odd) {
+        background-color: var(--features-data-background);
+      }
+      .feature-container .package-container .package-mobile-title {
+        margin-top: calc(var(--features-package-border-width) - 0.1px);
+      }
+      .feature-container .package-container .package-mobile-title > div {
+        text-align: left;
+        padding-left: 30px !important;
+      }
+      .feature-container .package-container .package-data > div,
+      .feature-container .package-container .package-mobile-title > div {
+        padding: 6px 0 6px 0;
+      }
+      .feature-container .package-container {
+        flex-grow: 1;
+      }
+      .feature-container .package-container .package-body {
+        border: var(--features-package-border-width) solid black;
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+      }
+      .feature-container .package-container .package-data {
+        border-top: var(--features-package-border-width) solid black;
+      }
+      /*Package Header*/
+      .feature-container .package-header {
+        display: block;
+        padding: 10px 0;
+      }
+      .feature-container .package-header:has(.package-description) {
+        padding: 20px 0 10px 0;
+      }
+      .feature-container
+        .package-header-icon-container:has(> .package-header-icon-mobile) {
+        display: none;
+      }
+      .feature-container .package-header-content,
+      .feature-container .package-description,
+      .feature-container .package-price {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+      }
+      .feature-container .package-heading {
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+      }
+
+      .feature-container .package-description p,
+      .feature-container .package-price p {
+        margin: 0;
+      }
+      .feature-container .package-header-icon img,
+      .feature-container .package-header-icon-floating img {
+        height: 55px;
+        width: 55px;
+        background-color: white;
+      }
+      .feature-container .package-header-icon-floating {
+        position: relative;
+      }
+      .feature-container .package-header-icon-floating img {
+        position: absolute;
+        left: -26px;
+        top: 55px;
+      }
+
+      /*Package Footer*/
+      .feature-container .package-footer {
+        position: relative;
+      }
+      .feature-container .package-footer > div {
+        top: -25px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+      }
+      .feature-container .package-select-button {
+        text-align: center;
+        display: block;
+        width: 70%;
+        left: 0;
+        background-color: #48b5f6;
+        color: white;
+        text-decoration: none;
+        font-size: 23px;
+        font-weight: 600;
+        padding: 10px;
+        border-radius: 30px;
+      }
+
+      /* Package top badge */
+      .feature-container .package-top-badge {
+        position: relative;
+        top: -8px;
+      }
+      .feature-container .package-top-badge > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .feature-container .package-top-badge > div span {
+        background-color: #fdf4bd;
+        border: 1.5px solid #cbc173;
+        border-radius: 3px;
+        display: inline-block;
+        padding: 0 10px;
+        color: rgb(0, 0, 0);
+      }
+
+      /*Alert*/
+      .warning {
+        display: flex;
+        background: #fdf4d7;
+        border: 1px solid #ded4b2;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .warning svg {
+        fill: #c1a659;
+        height: 40px;
+        width: 40px;
+      }
+      /*Responsive*/
+      @media only screen and (max-width: 630px) {
+        .feature-container {
+          flex-direction: column;
+          align-items: stretch;
+          row-gap: 50px;
+        }
+        .feature-container .title-container,
+        .feature-container .gap,
+        .feature-container .package-header-icon-floating {
+          display: none !important;
+        }
+
+        .feature-container .package-data-container {
+          display: flex;
+          width: 100%;
+        }
+
+        .feature-container .package-mobile-title {
+          display: block;
+        }
+        .feature-container .package-top-badge > div {
+          left: 20px;
+          justify-content: left;
+        }
+        .feature-container .package-header-icon-mobile {
+          width: 55px;
+          height: 55px;
+        }
+        .feature-container .package-header {
+          display: flex !important;
+          align-items: center !important;
+        }
+        .feature-container .package-data-container > div:nth-child(1),
+        .feature-container .package-header > div:nth-child(1) {
+          width: 35%;
+          display: block;
+        }
+        .feature-container .package-data-container > div:nth-child(2),
+        .feature-container .package-header > div:nth-child(2) {
+          width: 65%;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -140,10 +383,7 @@
       <!-- Warning -->
       <div class="warning">
         <div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path
               d="M11.953 2C6.465 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.493 2 11.953 2zM12 20c-4.411 0-8-3.589-8-8s3.567-8 7.953-8C16.391 4 20 7.589 20 12s-3.589 8-8 8z"
             ></path>
@@ -164,6 +404,5 @@
         </div>
       </div>
     </div>
-    <script type="module" src="/main.js"></script>
   </body>
 </html>

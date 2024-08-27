@@ -204,48 +204,45 @@
         height: 40px;
         width: 40px;
       }
-      /*Responsive*/
-      @media only screen and (max-width: 630px) {
-        .feature-container {
-          flex-direction: column;
-          align-items: stretch;
-          row-gap: 50px;
-        }
-        .feature-container .title-container,
-        .feature-container .gap,
-        .feature-container .package-header-icon-floating {
-          display: none !important;
-        }
+      .feature-container {
+        flex-direction: column;
+        align-items: stretch;
+        row-gap: 50px;
+      }
+      .feature-container .title-container,
+      .feature-container .gap,
+      .feature-container .package-header-icon-floating {
+        display: none !important;
+      }
 
-        .feature-container .package-data-container {
-          display: flex;
-          width: 100%;
-        }
+      .feature-container .package-data-container {
+        display: flex;
+        width: 100%;
+      }
 
-        .feature-container .package-mobile-title {
-          display: block;
-        }
-        .feature-container .package-top-badge > div {
-          left: 20px;
-          justify-content: left;
-        }
-        .feature-container .package-header-icon-mobile {
-          width: 55px;
-          height: 55px;
-        }
-        .feature-container .package-header {
-          display: flex !important;
-          align-items: center !important;
-        }
-        .feature-container .package-data-container > div:nth-child(1),
-        .feature-container .package-header > div:nth-child(1) {
-          width: 35%;
-          display: block;
-        }
-        .feature-container .package-data-container > div:nth-child(2),
-        .feature-container .package-header > div:nth-child(2) {
-          width: 65%;
-        }
+      .feature-container .package-mobile-title {
+        display: block;
+      }
+      .feature-container .package-top-badge > div {
+        left: 20px;
+        justify-content: left;
+      }
+      .feature-container .package-header-icon-mobile {
+        width: 55px;
+        height: 55px;
+      }
+      .feature-container .package-header {
+        display: flex !important;
+        align-items: center !important;
+      }
+      .feature-container .package-data-container > div:nth-child(1),
+      .feature-container .package-header > div:nth-child(1) {
+        width: 35%;
+        display: block;
+      }
+      .feature-container .package-data-container > div:nth-child(2),
+      .feature-container .package-header > div:nth-child(2) {
+        width: 65%;
       }
     </style>
   </head>
@@ -274,7 +271,7 @@
         <div class="package-container">
           <!-- Floating Icon for desktop -->
           <div class="package-header-icon-floating">
-            <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Generator:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2016%2016'%20xmlns='http://www.w3.org/2000/svg'%20fill='%23000000'%3e%3cpath%20d='M8.069%200c.262%200%20.52.017.76.057a4.1%204.1%200%200%201%20.697.154c.228.069.451.155.674.263.217.103.44.229.663.366.377.24.748.434%201.126.589a7.537%207.537%200%200%200%202.331.525c.406.029.823.046%201.257.046v4c0%20.76-.097%201.48-.291%202.166a8.996%208.996%200%200%201-.789%201.943%2010.312%2010.312%200%200%201-1.188%201.725%2015.091%2015.091%200%200%201-1.492%201.532%2017.57%2017.57%200%200%201-1.703%201.325c-.594.412-1.194.795-1.794%201.143l-.24.143-.24-.143a27.093%2027.093%200%200%201-1.806-1.143%2015.58%2015.58%200%200%201-1.703-1.325%2015.082%2015.082%200%200%201-1.491-1.532%2010.947%2010.947%200%200%201-1.194-1.725%209.753%209.753%200%200%201-.789-1.943A7.897%207.897%200%200%201%20.571%206V2c.435%200%20.852-.017%201.258-.046a8.16%208.16%200%200%200%201.188-.171c.383-.086.766-.2%201.143-.354A6.563%206.563%200%200%200%205.28.846C5.72.56%206.166.349%206.606.21A4.79%204.79%200%200%201%208.069%200zm6.502%202.983a9.566%209.566%200%200%201-2.234-.377%207.96%207.96%200%200%201-2.046-.943A4.263%204.263%200%200%200%209.23%201.16%203.885%203.885%200%200%200%208.074.994a3.99%203.99%200%200%200-1.165.166%203.946%203.946%200%200%200-1.058.503A7.926%207.926%200%200%201%203.8%202.61c-.709.206-1.451.332-2.229.378v3.017c0%20.663.086%201.297.258%201.908a8.58%208.58%200%200%200%20.72%201.743%209.604%209.604%200%200%200%201.08%201.572c.417.491.862.948%201.342%201.382.48.435.983.835%201.509%201.206.531.372%201.063.709%201.594%201.017a22.397%2022.397%200%200%200%201.589-1.017%2015.389%2015.389%200%200%200%201.514-1.206c.48-.434.926-.891%201.343-1.382a9.596%209.596%200%200%200%201.08-1.572%208.258%208.258%200%200%200%20.709-1.743%206.814%206.814%200%200%200%20.262-1.908V2.983z'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M11.797%204.709l-.44-.378-.406.035-4.36%205.148-1.485-2.12-.4-.068-.463.331-.069.4%201.909%202.726.217.12.457.028.234-.102%204.835-5.715-.029-.405z'/%3e%3c/svg%3e" alt="Workspace Trusted" />
+            <img src="./images/workspace-trusted.svg" alt="Workspace Trusted" />
           </div>
 
           <!-- Floating top badge -->
@@ -289,7 +286,7 @@
               <div class="package-header-icon-container">
                 <img
                   class="package-header-icon-mobile"
-                  src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Generator:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2016%2016'%20xmlns='http://www.w3.org/2000/svg'%20fill='%23000000'%3e%3cpath%20d='M8.069%200c.262%200%20.52.017.76.057a4.1%204.1%200%200%201%20.697.154c.228.069.451.155.674.263.217.103.44.229.663.366.377.24.748.434%201.126.589a7.537%207.537%200%200%200%202.331.525c.406.029.823.046%201.257.046v4c0%20.76-.097%201.48-.291%202.166a8.996%208.996%200%200%201-.789%201.943%2010.312%2010.312%200%200%201-1.188%201.725%2015.091%2015.091%200%200%201-1.492%201.532%2017.57%2017.57%200%200%201-1.703%201.325c-.594.412-1.194.795-1.794%201.143l-.24.143-.24-.143a27.093%2027.093%200%200%201-1.806-1.143%2015.58%2015.58%200%200%201-1.703-1.325%2015.082%2015.082%200%200%201-1.491-1.532%2010.947%2010.947%200%200%201-1.194-1.725%209.753%209.753%200%200%201-.789-1.943A7.897%207.897%200%200%201%20.571%206V2c.435%200%20.852-.017%201.258-.046a8.16%208.16%200%200%200%201.188-.171c.383-.086.766-.2%201.143-.354A6.563%206.563%200%200%200%205.28.846C5.72.56%206.166.349%206.606.21A4.79%204.79%200%200%201%208.069%200zm6.502%202.983a9.566%209.566%200%200%201-2.234-.377%207.96%207.96%200%200%201-2.046-.943A4.263%204.263%200%200%200%209.23%201.16%203.885%203.885%200%200%200%208.074.994a3.99%203.99%200%200%200-1.165.166%203.946%203.946%200%200%200-1.058.503A7.926%207.926%200%200%201%203.8%202.61c-.709.206-1.451.332-2.229.378v3.017c0%20.663.086%201.297.258%201.908a8.58%208.58%200%200%200%20.72%201.743%209.604%209.604%200%200%200%201.08%201.572c.417.491.862.948%201.342%201.382.48.435.983.835%201.509%201.206.531.372%201.063.709%201.594%201.017a22.397%2022.397%200%200%200%201.589-1.017%2015.389%2015.389%200%200%200%201.514-1.206c.48-.434.926-.891%201.343-1.382a9.596%209.596%200%200%200%201.08-1.572%208.258%208.258%200%200%200%20.709-1.743%206.814%206.814%200%200%200%20.262-1.908V2.983z'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M11.797%204.709l-.44-.378-.406.035-4.36%205.148-1.485-2.12-.4-.068-.463.331-.069.4%201.909%202.726.217.12.457.028.234-.102%204.835-5.715-.029-.405z'/%3e%3c/svg%3e"
+                  src="./images/workspace-trusted.svg"
                   alt=""
                 />
               </div>
